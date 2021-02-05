@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+/*Fuente Lora para todo el texto del Curriculum*/
+
+*{
+    font-family: 'Lora', serif;
+}
+
+/*Se le añade un fondo y se le da una posicion relativa para luego el navbar pueda ser fixed*/
+
+body {
+    margin: 0;
+    background-image: url(https://img.freepik.com/foto-gratis/superficie-tablero-corcho_88281-2662.jpg?size=626&ext=jpg);
+    position: relative;
+    scroll-behavior: smooth;
+    color: black;
+    height: 100%;
+}
+
+/* Elemento para cargar la página. */
+
+#cargando {
+    background-image: url(https://media1.tenor.com/images/87058114d20205df7cd9f84c2125992a/tenor.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 98vh;
+
+}
+
+/*  Se le dan sombras, margen para que no se vea arriba del todo y pading.*/
+
+#app2 {
+    margin-top: 2rem;
+    background-color: rgb(214, 238, 241);
+    border: solid 1px black;
+    width: 80%;
+    padding: 5rem;
+    box-shadow: 2px 2px 10px #000000;
+}
+
+/*Se alinea al centro para que quede bien y se le da un poco de padding*/
+
+#nombre{
+    padding-top: 2rem;
+    text-align: center;
+}
+
+/*Se le hace un display flex para que salga ordenado todo y centrado.*/
+
+#app {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
+    color: black;
+
+}
+
+/* Se le ponen bordes y padding a los diferentes elementos. */
+
+#Sobre-mi,
+#Experiencia,
+#Educacion,
+#Idiomas,
+#Destrezas,
+#Contacto,
+#Referencias {
+    border: solid 1px black;
+    padding: 4rem;
+    word-break: break-all;
+
+}
+
+#Proyectos{
+    border: solid 1px black;
+    padding: 0.5rem;
+    word-break: break-all;
+}
+
+/*Se le da margen dentro de los componentes.*/
+
+#Sobre-mi1,
+#Experiencia1,
+#Educacion1,
+#Idiomas1,
+#Proyectos1,
+#Destrezas1,
+#Contacto1,
+#Referencias1 {
+    margin: 4rem;
+}
+
+
+/* Se alinean los componentes dentro de la tabla */
+
+#Educacion table {
+    display: flex;
+    border-collapse: collapse;
+    justify-content: center;
+}
+
+
+/* Se le ponen bordes y pading para que no esten tan pegados.*/ 
+
+#Educacion table tr td,
+#Educacion table tr th {
+    border: solid 1px black;
+    padding: 1rem;
+}
+
+/* Se le pone el display flex para que salgan orientados y con un poco de espacio entre ellos. */ 
+
+#Referencias {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+/* Se le da un color, margenes, padding y bordes*/
+
+.Referencia,
+.destreza {
+    background: linear-gradient(to bottom, #b0ddf7 70%, #c2c2c2);
+    border: solid 1px black;
+    margin: 1rem;
+    padding: 1.5rem;
+    border-radius: 20px;
+}
+
+/* Se le da el width al 100% para que pille todo el componente y se alinea al centro.*/
+
+.formulario {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Se le da un borde circular, y se orientan los componentes de dentro con el display flex*/
+
+.formulario form {
+    border-radius: 20px;
+    padding: 2rem;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    background:#b0ddf7 ;
+    border: solid 1px black;
+}
+
+/*Se le da un tamaño al boton del formulario y un color*/
+
+form button {
+    width: 50%;
+    background: cornflowerblue;
+}
+
+/* Se alinean en columnas para que no se vean tan juntos.*/
+
+#iconos {
+    display: flex;
+    flex-direction: column;
+}
+
+/*Se le ad un tamaño a los iconos y un margen para que se vean mas centrados.*/
+
+#iconos a {
+    font-size: 2rem;
+    margin-left: 5rem;
+}
+
+/* Se da un width para que ocupe todo y el z-index al 99 para que cuando se pulse encima de un componente con animacion no se vea encima de el navbar */
+
+.navbar {
+    width: 100%;
+    z-index: 99;
+}
+
+/* Se le da un display flex para que se vean ordenados y con el wrap en la misma linea con espacios entre ellos.*/
+
+#Proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Se alinea el texto y se le da un borde y sombras.*/
+
+.card {
+    background:#b0ddf7 ;
+    border: 1px solid black;
+    padding: 1rem;
+    border-radius: 20px;
+    text-align: center;
+    margin: 2rem;
+    box-shadow: 2px 2px 10px #000000;
+}
+.card img{
+    border-radius:20px ;
+}
+
+/* Se alinea el texto y se le da un borde y sombras.*/
+
+.card2 {
+    background:#b0ddf7 ;
+    border: 1px solid black;
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 3rem;
+    box-shadow: 2px 2px 10px #000000;
+}
+
+/*Se le da un margen arriba.*/
+
+#Experiencia,
+#Idiomas {
+    margin-top: 2rem;
+}
+
+/* Se le pone borde para que se vea mas bonito.*/
+
+.progress-bar {
+    border: solid 1px black;
+    
+}
+
+/*Pading para que no se vea tan junto.*/
+
+
+/* Un color para las celdas de la tabla.*/ 
+
+#Educacion table tr {
+    background:#b0ddf7 ;
+}
+
+/*Se alinea el titulo del curriculum al centro*/
+
+h1 {
+    text-align: center;
+}
+
+/*Se le hace un display para que se vean ordenados. */
+
+#Sobre-mi {
+    display: grid;
+}
+
+/*Se le da un tamaño a la imagen del curriculum. */
+
+#Sobre-mi div img {
+    width: 4.5em;
+    height: 8em;
+    
+}
+
+/*Se le da una posición del grid, y se le pone un display flex para ordenar los contenidos al centro.*/
+
+#Sobre-mi div:nth-child(2) {
+        grid-row:1;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 1rem;
+}
+
+/*Se le da una posición del grid.*/
+
+#Sobre-mi div:first-child{
+    grid-row: 2;
+}
+
+/*Se le da un color al modal.*/
+
+.modal-content {
+    background: linear-gradient(to bottom, #b0ddf7 , #b0ddf7);
+
+}
+
+/*Se le da un display para que se vea ordenado.*/
+
+#modal {
+    display: flex;
+}
+
+/*Se le da un display flex para que se vea ordenado, y se alinean al centro los componentes.*/
+
+#datos{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Clase para animacion que hace que bote.*/
+
+.fade-enter-active {
+    animation: bounce-in 2s;
+}
+
+/*Clase para animacion que hace que cambie el color.*/
+
+.fade-enter-active2 {
+    animation: go 2s;
+}
+
+/*Se le quitan los estilos a las listas.*/
+
+ul {
+    list-style: none;
+}
+
+/*Se le da una animación a los card cuando esta encima de ellos y se le cambia el transform para que se vean como mas cerca.*/
+
+.card:hover,
+.card2:hover {
+    animation: go 10s;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/*Animación que hace que bote. */
+
+@keyframes bounce-in {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/*Animación que va cambiando el color.*/
+
+@keyframes go {
+    from {
+        background: rgb(162, 234, 247);
+    }
+
+    to {
+        background: rgb(43, 75, 255);
+    }
+}
+
+
+@media (min-width: 870px) {
+    
+    /*Se ordenan de otra forma los componentes cuando se hacen mas grandes. */
+    
+    #Sobre-mi {
+        display: flex;
+    }
+    
+    #Proyectos{
+        padding: 4rem;
+    }
+
+    /*Se le da un tamaño al primer div.*/
+
+    #Sobre-mi div:first-child{
+        width: 90%;
+    }
+
+    /*Se le da un tamaño al formulario y un poco de padding.*/
+
+    .formulario form {
+        padding: 2rem;
+        width: 70%;
+    }
+
+    /*Se le da un display para que se ordenen los componentes y salgan alineados en una linea.*/
+
+    #iconos {
+        display: flex;
+        flex-direction: row;
+    }
+
+    form button {
+        width: 20%;
+        background: cornflowerblue;
+    }
+}

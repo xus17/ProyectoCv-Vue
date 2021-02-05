@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Curriculum</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Enlaces y favicon -->
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/xus17/Proyecto-Landing/master/img/cv.PNG">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/animate.css@3.5.1" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+
+    <!-- Scripts-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="module" src="script.js"></script>
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+    <div id="appprinci">
+        <div id="cargando" if="show">
+        </div>
+
+        <div if="!show" id="app" v-if="message.Todo">
+
+            <!-- Nav con scrollspy, se comprueban los idiomas y tiene una
+                    transición que hace que la barra se caiga -->
+
+            <transition appear appear-active-class="animated hinge">
+                <nav class="navbar navbar-inverse navbar-expand-xl " data-spy="affix" data-offset-top="198">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="index.html" v-if="idioma">Curriculum</a>
+                            <a class="navbar-brand" href="index.html" v-if="!idioma">Resume</a>
+                        </div>
+                        <div>
+                            <div class="collapse navbar-collapse " id="myNavbar">
+                                <ul class="nav navbar-nav" v-if="idioma">
+                                    <li><a href="#Sobre-mi1">Sobre mi</a></li>
+                                    <li><a href="#Experiencia1">Experiencia</a></li>
+                                    <li><a href="#Educacion1">Educacion</a></li>
+                                    <li><a href="#Destrezas1">Destrezas</a></li>
+                                    <li><a href="#Proyectos1">Proyectos</a></li>
+                                    <li><a href="#Idiomas1">Idiomas</a></li>
+                                    <li><a href="#Referencias1">Referencias</a></li>
+                                    <li><a href="#Contacto1">Contacto</a></li>
+                                    <li class="dropdown ">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cambiar Idioma</a>
+                                        <ul class="dropdown-menu">
+                                            <li v-on:click="cambiarIdiomaEsp"><a>Español</a></li>
+                                            <li v-on:click="cambiarIdiomaIng"><a>Inglés</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul class="nav navbar-nav" v-if="!idioma">
+                                    <li><a href="#Sobre-mi1">About me</a></li>
+                                    <li><a href="#Experiencia1">Profesional experience</a></li>
+                                    <li><a href="#Educacion1">Education</a></li>
+                                    <li><a href="#Destrezas1">Skills</a></li>
+                                    <li><a href="#Proyectos1">Developed projects</a></li>
+                                    <li><a href="#Idiomas1">Languages</a></li>
+                                    <li><a href="#Referencias1">References</a></li>
+                                    <li><a href="#Contacto1">Contact</a></li>
+                                    <li class="dropdown open">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Change Language</a>
+                                        <ul class="dropdown-menu">
+                                            <li v-on:click="cambiarIdiomaEsp"><a>Spanish</a></li>
+                                            <li v-on:click="cambiarIdiomaIng"><a>English</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </transition>
+
+
+
+
+            <div id="app2">
+                <h1 v-if="idioma">Curriculum</h1>
+                <h1 v-if="!idioma">Resume</h1>
+
+                <!-- Div con el que se mete la información del apartado Sobre-mi del json , se comprueban los idiomas y tiene 
+                    transición que viene desde la izquierda -->
+
+                <h2 v-if="idioma" id="Sobre-mi1">Sobre mi</h2>
+                <h2 v-if="!idioma" id="Sobre-mi1">About Me</h2>
+
+                <transition appear appear-active-class="animated zoomInLeft">
+                    <div id="Sobre-mi" class="container-fluid sectionX">
+
+                        <div>
+
+                            <p v-if="idioma"><strong>Nombre:</strong> {{message.Todo.Sobremi.nombre}}</p>
+                            <p v-if="!idioma"><strong>Name:</strong> {{message.Todo.Sobremi.nombre}}</p>
+
+                            <p v-if="idioma"><strong>Apellidos:</strong> {{message.Todo.Sobremi.apellidos}}</p>
+                            <p v-if="!idioma"><strong>Surname:</strong> {{message.Todo.Sobremi.apellidos}}</p>
+
+                            <p v-if="idioma"><strong>Dirección:</strong> {{message.Todo.Sobremi.direccion}}</p>
+                            <p v-if="!idioma"><strong>Address:</strong> {{message.Todo.Sobremi.direccion}}</p>
+
+                            <p v-if="idioma"><strong>Correo:</strong> {{message.Todo.Sobremi.correo}}</p>
+                            <p v-if="!idioma"><strong>Email:</strong> {{message.Todo.Sobremi.correo}}</p>
+
+                            <p v-if="idioma"><strong>Telefono:</strong> {{message.Todo.Sobremi.telefono}}</p>
+                            <p v-if="!idioma"><strong>Phone Number:</strong> {{message.Todo.Sobremi.telefono}}</p>
+
+                            <p v-if="idioma"><strong>Presentacion:</strong> {{message.Todo.Sobremi.presentacion}}</p>
+                            <p v-if="!idioma"><strong>Description:</strong> {{message.Todo.Sobremi.presentacioningles}}
+                            </p>
+
+                            <div id="iconos">
+                                <p v-if="idioma"><strong>Redes:</strong></p>
+                                <p v-if="!idioma"><strong>Social Networks:</strong></p>
+                                <a target="_blank" :href="message.Todo.Sobremi.redes.twitter"><i
+                                        class="fa fa-twitter"></i>Twitter</a>
+                                <a target="_blank" :href="message.Todo.Sobremi.redes.insta"><i
+                                        class="fa fa-instagram"></i>Instagram</a>
+                                <a target="_blank" :href="message.Todo.Sobremi.redes.github"><i
+                                        class="fa fa-github"></i>Github</a>
+                                <a target="_blank" :href="message.Todo.Sobremi.redes.linkedin"><i
+                                        class="fa fa-linkedin"></i>Linkedin</a>
+
+
+                            </div>
+
+                        </div>
+                        <div>
+                            <img src="https://raw.githubusercontent.com/xus17/Proyecto-Landing/master/img/cv.PNG"
+                                alt="">
+                        </div>
+
+
+
+                    </div>
+                </transition>
+
+                <!-- Div con el que se meten los trabajos con un bucle for , se comprueban los idiomas y tiene 
+                    transición que viene desde la derecha -->
+
+                <h2 v-if="idioma" id="Experiencia1">Experiencia profesional</h2>
+                <h2 v-if="!idioma" id="Experiencia1">Professional experience</h2>
+
+                <transition-group appear appear-active-class="animated zoomInRight">
+
+                    <div id="Experiencia" v-for="(trabajo,index) in message.Todo.Experienciaprofesional"
+                        v-bind:key="trabajo.puesto+index" class="container-fluid sectionX">
+
+                        <p v-if="idioma"><strong>Puesto:</strong> {{trabajo.puesto}}</p>
+                        <p v-if="!idioma"><strong>Job:</strong> {{trabajo.puestoingles}}</p>
+
+                        <p v-if="idioma"><strong>Fecha de Inicio:</strong> {{trabajo.fechainicio}}</p>
+                        <p v-if="!idioma"><strong>Beginnig Date:</strong> {{trabajo.fechainicio}}</p>
+
+                        <p v-if="idioma"><strong>Fecha de Final:</strong> {{trabajo.fechafin}}</p>
+                        <p v-if="!idioma"><strong>End Date:</strong> {{trabajo.fechafin}}</p>
+
+                        <p v-if="idioma"><strong>Descripcion:</strong> {{trabajo.descripcion}}</p>
+                        <p v-if="!idioma"><strong>Description: </strong>{{trabajo.descripcioningles}}</p>
+                    </div>
+                </transition-group>
+
+                <!-- Div con el que se meten cursos con un bucle for dentro de una tabla , se comprueban los idiomas y tiene 
+                    transición que viene desde la izquierda -->
+
+                <h2 v-if="idioma" id="Educacion1">Educación</h2>
+                <h2 v-if="!idioma" id="Educacion1">Education</h2>
+
+                <transition appear appear-active-class="animated zoomInLeft">
+                    <div id="Educacion" class="container-fluid sectionX">
+                        <table>
+                            <tr>
+                                <th v-if="idioma">Nombre</th>
+                                <th v-if="idioma">Fecha</th>
+                                <th v-if="idioma">Lugar</th>
+
+                                <th v-if="!idioma">Name</th>
+                                <th v-if="!idioma">Date</th>
+                                <th v-if="!idioma">Place</th>
+
+                            </tr>
+                            <tr v-for="(educacion,index) in message.Todo.Educacion">
+
+                                <td v-if="idioma">{{educacion.nombre}}</td>
+                                <td v-if="!idioma">{{educacion.nombreingles}}</td>
+                                <td>{{educacion.fecha}}</td>
+                                <td>{{educacion.lugar}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </transition>
+
+                <!-- Div con el que se meten destrezas con un bucle for , se comprueban los idiomas y tiene 
+                    transición que viene desde la derecha -->
+
+                <h2 v-if="idioma" id="Destrezas1">Destrezas</h2>
+                <h2 v-if="!idioma" id="Destrezas1">Skills</h2>
+
+                <transition appear appear-active-class="animated zoomInRight">
+                    <div id="Destrezas" class="container-fluid sectionX">
+                        <div class="card2" data-toggle="modal" :data-target="'#model'+index"
+                            v-for="(destrezas,index) in message.Todo.Destrezas">
+
+                            <div class="card-body">
+                                <p v-if="idioma" class="card-title">{{destrezas.habilidad}}</p>
+                                <p v-if="!idioma" class="card-title">{{destrezas.habilidadingles}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </transition>
+
+                <!-- Div con el que se meten proyectos dentro de un car con un bucle for , se comprueban los idiomas y tiene 
+                    transición que viene desde la izquierda -->
+
+                <h2 v-if="idioma" id="Proyectos1">Proyectos desarrollados</h2>
+                <h2 v-if="!idioma" id="Proyectos1">Developed projects</h2>
+
+                <transition appear appear-active-class="animated zoomInLeft">
+                    <div id="Proyectos">
+
+                        <div class="card" data-toggle="modal" :data-target="'#model'+index"
+                            v-for="(proyecto,index) in message.Todo.Proyectos" v-on:click="addModal(index)">
+                            <img class="card-img-top" width="150px" height="150px" :src="proyecto.imagen" alt="">
+                            <div class="card-body">
+                                <h4 v-if="idioma" class="card-title">{{proyecto.titulo}}</h4>
+                                <h4 v-if="!idioma" class="card-title">{{proyecto.tituloingles}}</h4>
+                            </div>
+                        </div>
+
+                    </div>
+                </transition>
+
+                <!-- Div con el que se meten Idiomascon un bucle for , con  progress-bar,se comprueban los idiomas y tiene 
+                    transición que viene desde la derecha -->
+
+                <h2 v-if="idioma" id="Idiomas1">Idiomas</h2>
+                <h2 v-if="!idioma" id="Idiomas1">Languages</h2>
+
+                <transition-group appear appear-active-class="animated zoomInRigth">
+
+                    <div id="Idiomas" v-for="(idioma,index) in message.Todo.Idiomas" class="container-fluid sectionX"
+                        v-bind:key="idioma+index">
+
+                        <p v-if="idioma"><strong>Idioma:</strong> {{idioma.lenguaje}}</p>
+                        <p v-if="!idioma"><strong>Language:</strong> {{idioma.lenguajeingles}}</p>
+
+                        <p v-if="idioma"><strong>Nivel: </strong>{{idioma.nivel}}</p>
+                        <p v-if="!idioma"><strong>Level:</strong> {{idioma.nivelingles}}</p>
+
+                        <div class="progress-bar" role="progressbar" :style="'width:' + idioma.porcentaje +'%'"
+                            aria-valuenow=20 aria-valuemin="0" aria-valuemax="100">{{idioma.porcentaje}}%</div>
+
+                    </div>
+                </transition-group>
+
+                <!-- Div con el que se meten referencias con un bucle for , se comprueban los idiomas y tiene 
+                    transición que viene desde la izquierda -->
+
+                <h2 v-if="idioma" id="Referencias1">Referencias</h2>
+                <h2 v-if="!idioma" id="Referencias1">References</h2>
+
+                <transition appear appear-active-class="animated zoomInLeft">
+                    <div id="Referencias" class="container-fluid sectionX">
+
+                        <div class="card2" data-toggle="modal" :data-target="'#model'+index"
+                            v-for="(referencia,index) in message.Todo.Referencias">
+                            <div class="card-body">
+                                <p v-if="idioma"><strong>Nombre:</strong> {{referencia.nombre}}</p>
+                                <p v-if="!idioma"><strong>Name:</strong> {{referencia.nombre}}</p>
+
+                                <p v-if="idioma"><strong>Comentario:</strong> {{referencia.referencia}}</p>
+                                <p v-if="!idioma"><strong>Comment:</strong> {{referencia.referenciaingles}}</p>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </transition>
+
+                <!-- Formulario con campos para contactar y una transición que viene desde la derecha -->
+
+                <h2 v-if="idioma" id="Contacto1">Contacto</h2>
+                <h2 v-if="!idioma" id="Contacto1">Contact</h2>
+
+                <transition appear appear-active-class="animated zoomInRight">
+                    <div id="Contacto" class="container-fluid sectionX">
+                        <div class="formulario">
+                            <form class="" action="index.html" method="post" v-if="idioma">
+                                <label for="">Nombre</label><input type="text" name="" value="" id="input1" required
+                                    placeholder="Aqui el nombre...">
+                                <label for="">Apellidos</label><input type="text" name="" value="" id="input2" required
+                                    placeholder="Aqui los apellidos...">
+                                <label for="">Correo</label><input type="email" name="email" size="31" id="input3"
+                                    required placeholder="ejemplo@ejemplo.es" />
+                                <label for="telefono">Telefono</label><input type="number" name="telefono" id="input4"
+                                    required maxlength="9" placeholder="Aqui el telefono...">
+                                <label for="">Direccion</label><input type="text" name="" value="" id="input5" required
+                                    placeholder="Aqui la direccion...">
+                                <label for="">Comentario</label><textarea id="subject" required name="subject"
+                                    id="input8" placeholder="Escribe algo..." style="height:200px"></textarea>
+                                <button type="button" name="button" id="bt-form">Enviar</button>
+                            </form>
+                            <form class="" action="index.html" method="post" v-if="!idioma">
+                                <label for="">Name</label><input type="text" name="" value="" id="input1" required
+                                    placeholder="Here the name...">
+                                <label for="">Surname</label><input type="text" name="" value="" id="input2" required
+                                    placeholder="Here the surname...">
+                                <label for="">Email</label><input type="email" name="email" size="31" id="input3"
+                                    required placeholder="example@example.es" />
+                                <label for="telefono">Phone Number</label><input type="number" name="telefono"
+                                    id="input4" required maxlength="9" placeholder="Here the phone number...">
+                                <label for="">Address</label><input type="text" name="" value="" id="input5" required
+                                    placeholder="Here the address...">
+                                <label for="">Comment</label><textarea id="subject" required name="subject" id="input8"
+                                    placeholder="Write something..." style="height:200px"></textarea>
+                                <button type="button" name="button" id="bt-form">Send</button>
+                            </form>
+                        </div>
+                    </div>
+                </transition>
+                <p id="nombre">© Jesús Manuel González Santiago</p>
+            </div>
+
+            <!-- MODAL -->
+
+            <div class="modal" id="model" tabindex="-1" role="dialog" aria-labelledby="modelMovie" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h3 id="modalTitle" v-if="idioma">{{message.Todo.Proyectos[0].titulo}}</h3>
+                            <h3 id="modalTitleEng" v-if="!idioma">{{message.Todo.Proyectos[0].titulo}}</h3>
+                        </div>
+                        <div class="modal-body">
+                            <div id="modal" class="form-group">
+
+                                <div id="datos">
+
+                                    <p v-if="idioma" id="descripcion"></p>
+                                    <p v-if="!idioma" id="description"></p>
+                                    <br>
+                                    <img id="imgModal" :src="message.Todo.Proyectos[0].imagen" alt="" width="300px"
+                                        height="200px">
+                                    <br>
+                                    <p v-if="idioma" id="tecno"> </p>
+                                    <p v-if="!idioma" id="tecnoEng"> </p>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <a id="link1" target="_blank" v-if="idioma" class="btn btn-primary"> Enlace</a>
+                            <a id="link1" target="_blank" v-if="!idioma" class="btn btn-primary">Link</a>
+                            <a id="link2" target="_blank" v-if="idioma" class="btn btn-primary"> Enlace en
+                                produccion</a>
+                            <a id="link2" target="_blank" v-if="!idioma" class="btn btn-primary">Link in production</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        
+    </div>
+
+</body>
+
+</html>

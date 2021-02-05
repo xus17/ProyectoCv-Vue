@@ -1,0 +1,184 @@
+{
+    "Todo": {
+        "Sobremi": {
+            "nombre": "Jesús Manuel",
+            "apellidos": "González Santiago",
+            "direccion": "Pulianas La Joya C/Amatista Nº7 ",
+            "correo": "jgonzalezsantiago17@gmail.com",
+            "telefono": "676-495-783",
+            "redes": {
+                "insta": "https://www.instagram.com/xus17/",
+                "twitter": "https://twitter.com/jesusxus17",
+                "github": "https://github.com/xus17",
+                "linkedin": "https://es.linkedin.com/in/jes%C3%BAs-manuel-gonz%C3%A1lez-santiago-8b2826205?trk=people-guest_people_search-card"
+            },
+            "presentacion": "Programador de 21 años con más de tres años de experiencia generando código para proyectos, con ganas de encontrar una empresa para explotar todos mis conocimientos. Aplicado y con ganas de aprender, y ayudar a mis compañeros.",
+            "presentacioningles": "21-year-old programmer with more than three years of experience generating code for projects, wanting to find a company to exploit all my knowledge. Applied and eager to learn, and help my colleagues."
+        },
+        "Experienciaprofesional": [
+            {
+                "puesto": "Repartidor en Kebabs Abdul",
+                "puestoingles": "Delivery man at Kebabs Abdul",
+                "fechainicio": "12/05/2019",
+                "fechafin": "13/05/2019",
+                "descripcion": "Repartia pizzas y kebabs por la localidad de Peligros y Pulianas.",
+                "descripcioningles": "Deliver pizzas and kebabs around the town of Peligros and Pulianas."
+            },
+            {
+                "puesto": "Barman en Bar Miramar",
+                "puestoingles": "Barman at Bar Miramar",
+                "fechainicio": "27/05/2019",
+                "fechafin": "01/09/2019",
+                "descripcion": "Me encargaba de poner la bebida, y en algunos casos que se necesitara gente fuera salia a ayudar a los compañeros , y ademas de la logística y el abastecimiento de los productos del bar. ",
+                "descripcioningles": "I was in charge of putting the drink, and in some cases when people were needed outside, I would go out to help the colleagues, and in addition to the logistics and the supply of the bar products."
+            },
+            {
+                "puesto": "Camarero en Bar Miramar",
+                "puestoingles": "Waiter at Bar Miramar",
+                "fechainicio": "01/07/2020",
+                "fechafin": "01/09/2020",
+                "descripcion": "Me encargaba de llevar la bebida y la comida a las mesas y de atender a los clientes, y en algunos casos que se necesitara gente en la barra entraba a ayudar a los compañeros , y ademas de la logística y el abastecimiento de los productos del bar.",
+                "descripcioningles": "I was in charge of bringing drinks and food to the tables and serving customers, and in some cases when people were needed at the bar, I came in to help colleagues, and in addition to the logistics and supply of the bar products ."
+            },
+            {
+                "puesto": "Camarero en Bar La Buena Estrella",
+                "puestoingles": "Waiter at Bar La Buena Estrella",
+                "fechainicio": "13/02/2021",
+                "fechafin": "01/09/2021",
+                "descripcion": "Me encargo de atender a los clientes y llevar la bebida y comida a las mesas.",
+                "descripcioningles": "I take care of serving customers and bringing food and drink to the tables."
+            }
+        ],
+        "Educacion": [
+            {
+                "nombre": "Educacion Obligatoria Secundaria",
+                "nombreingles": "Compulsory Secondary Education",
+                "fecha": "27/05/2016",
+                "lugar": "IES Virgen de las Nieves"
+            },
+            {
+                "nombre": "Bachillerato",
+                "nombreingles": "High School",
+                "fecha": "27/05/2019",
+                "lugar": "IES Virgen de las Nieves"
+            },
+            {
+                "nombre": "Grado Superior en Desarrollo de Aplicaciones  Multiplataforma",
+                "nombreingles": "Higher Degree in Development of Multiplatform Applications",
+                "fecha": "28/02/2020",
+                "lugar": "IES Francisco Ayala"
+            },
+            {
+                "nombre": "Grado Superior en el Desarrollo de Paginas Web",
+                "nombreingles": "Superior Degree in Web Pages Development",
+                "fecha": "28/02/2021",
+                "lugar": "IES Francisco Ayala"
+            }
+        ],
+        "Destrezas": [
+            {
+                "habilidad":"Trabajo en equipo.",
+                "habilidadingles":"Teamwork."
+            },
+            {
+                "habilidad":"Gran capacidad de adaptacion.",
+                "habilidadingles":"Great adaptability."
+            },
+            {
+                "habilidad":"Competencia digitales en: PHP, JAVA, JAVASCRIPT, HTML5/CSS, JSON, MYSQL, SWIFT, KOTLIN, VUE y PYTHON.",
+                "habilidadingles":"Digital competence in: PHP, JAVA, JAVASCRIPT, HTML5 / CSS, JSON, MYSQL, SWIFT, KOTLIN, VUE and PYTHON."
+            },
+            {
+                "habilidad":"Esfuerzo y lealtad.",
+                "habilidadingles":"Effort and loyalty."
+            },
+            {
+                "habilidad":"Habilidades organizativas.",
+                "habilidadingles":"Organizational skills."
+            },
+            {
+                "habilidad":"Idiomas.",
+                "habilidadingles":"Languages."
+            }
+        ],
+        "Proyectos": [
+            {
+                "titulo": "Super Pang",
+                "tituloingles":"Super Pang",
+                "link": "https://xus17.github.io/SuperPang/index.html",
+                "linkrepositorio": "https://github.com/xus17/SuperPang",
+                "imagen": "https://raw.githubusercontent.com/xus17/SuperPang/master/Img/Capturaw.PNG",
+                "resumen": "Es un juego realizado en Javascript en el que consta de una pantalla de carga para iniciar el juego, seguido de la pantalla para jugar en la que tendras que explotar las dos bolas que hay en el juego disparandolas que a su vez se dividiran en otras dos bolas y cuando ya no te queden bolas ganaras y te llevara a una pantalla en la que pone que has ganado, pero si te dan moriras y te llevara a una pantalla de muerte.",
+                "resumeningles": "It is a game made in Javascript in which it consists of a loading screen to start the game, followed by the screen to play in which you will have to explode the two balls in the game by shooting them, which in turn will be divided into two others balls and when you have no more balls you will win and it will take you to a screen that says you have won, but if they give you you will die and it will take you to a death screen.",
+                "tecnologiasempleadas": "Javascript, HTML5, CSS"
+            },
+            {
+                "titulo": " Proyecto Landing",
+                "tituloingles":"Landing Page",
+                "link": "https://xus17.github.io/Proyecto-Landing/",
+                "linkrepositorio": "https://github.com/xus17/Proyecto-Landing",
+                "imagen": "https://raw.githubusercontent.com/xus17/Proyecto-Landing/master/img/Captura.PNG",
+                "resumen": "Es una Landing page de una tienda en la que consta de un menu con enlaces a distintas partes de la página, una imágen principal, objetos que se pueden comprar en la tienda, reseñas de los clientes y un formulario para registrate en la página.",
+                "resumeningles": "It is a Landing page of a store that consists of a menu with links to different parts of the page, a main image, objects that can be purchased in the store, customer reviews and a form to register on the page.",
+                "tecnologiasempleadas": "Jquery, CSS/FlexBox, HTML5, Ajax, Javascript, JSON"
+            },
+            {
+                "titulo": "Peliculas API",
+                "tituloingles": "API Movies",
+                "link": "https://xus17.github.io/Peliculas-API/",
+                "linkrepositorio": "https://github.com/xus17/Peliculas-API",
+                "imagen": "https://raw.githubusercontent.com/xus17/Peliculas-API/main/Img/Captura2.PNG",
+                "resumen": "Es una página en la que se cogen valores de una API de peliculas, y se van recargando cada vez que bajes para que nunca se te acaben. Además puedes buscar la pelicula que quieras y al clicar sobre una te dará información acerca de ella.",
+                "resumeningles": "It is a page in which values ​​are taken from a movie API, and they are reloaded every time you download so that you never run out. You can also search for the movie you want and clicking on one will give you information about it.",
+                "tecnologiasempleadas": "Javascript, HTML5, Ajax, JSON, CSS"
+            }
+        ],
+        "Idiomas": [
+            {
+                "lenguaje": "Español",
+                "lenguajeingles": "Spanish",
+                "nivel": "Nativo",
+                "nivelingles": "Native",
+                "porcentaje": "100"
+            },
+            {
+                "lenguaje": "Ingles",
+                "lenguajeingles": "English",
+                "nivel": "Intermedio",
+                "nivelingles": "Intermediate",
+                "porcentaje": "70"
+            },
+            {
+                "lenguaje": "Aleman",
+                "lenguajeingles": "German",
+                "nivel": "Principiante",
+                "nivelingles": "Beginner",
+                "porcentaje": "40"
+            },
+            {
+                "lenguaje": "Frances",
+                "lenguajeingles": "French",
+                "nivel": "Principiante",
+                "nivelingles": "Beginner",
+                "porcentaje": "20"
+            }
+        ],
+        "Referencias": [
+            {
+                "nombre": "Miguel",
+                "referencia": "Un gran trabajador formal y serio, buen trato con el cliente.",
+                "referenciaingles": "A great formal and serious worker, good treatment with the client."
+            },
+            {
+                "nombre": "Abdul",
+                "referencia": "Rápido y se conoce las calles.",
+                "referenciaingles": "Fast and he knows the streets."
+            },
+            {
+                "nombre": "Toñi",
+                "referencia": "Atento y rápido.",
+                "referenciaingles": "Attentive and fast"
+            }
+        ]
+    }
+}
